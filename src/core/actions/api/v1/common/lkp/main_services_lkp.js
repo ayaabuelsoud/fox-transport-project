@@ -1,0 +1,49 @@
+export const ACTION_API_V1_COMMON_LKP_MAIN_SERVICES_LKP_GET_MAIN_SERVICES_DATA_REQUEST = "@V1/COMMON/LKP/LKP_MAIN_SERVICES/GET_MAIN_SERVICES_DATA_REQUEST"
+export const ACTION_API_V1_COMMON_LKP_MAIN_SERVICES_LKP_GET_MAIN_SERVICES_DATA_SUCCESS = "@V1/COMMON/LKP/LKP_MAIN_SERVICES/GET_MAIN_SERVICES_DATA_SUCCESS"
+export const ACTION_API_V1_COMMON_LKP_MAIN_SERVICES_LKP_GET_MAIN_SERVICES_DATA_FAILED = "@V1/COMMON/LKP/LKP_MAIN_SERVICES/GET_MAIN_SERVICES_DATA_FAILED"
+
+export function getMainServices(data) {
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            // Add any additional headers as needed
+        },
+        body: JSON.stringify(data),
+    })
+        .then((respones)=>{
+            dispatch();
+        })
+        .catch((error) => {
+            console.error('API error:', error);
+            throw error;
+        });
+}
+
+//http://localhost:27017/api/v1/common/lkp/main_services_lkp/En/get_main_services_data/all
+//http://localhost:27017/api/v1/common/lkp/main_services_lkp/:langTitle/get_main_services_data/:suspendStatus
+
+export const ACTION_API_V1_COMMON_LKP_MAIN_SERVICES_LKP_UPDATE_MAIN_SERVICES_DATA_REQUEST = "@V1/COMMON/LKP/LKP_MAIN_SERVICES/UPDATE_MAIN_SERVICES_DATA_REQUEST"
+export const ACTION_API_V1_COMMON_LKP_MAIN_SERVICES_LKP_UPDATE_MAIN_SERVICES_DATA_SUCCESS = "@V1/COMMON/LKP/LKP_MAIN_SERVICES/UPDATE_MAIN_SERVICES_DATA_SUCCESS"
+export const ACTION_API_V1_COMMON_LKP_MAIN_SERVICES_LKP_UPDATE_MAIN_SERVICES_DATA_FAILED = "@V1/COMMON/LKP/LKP_MAIN_SERVICES/UPDATE_MAIN_SERVICES_DATA_FAILED"
+
+export function UpdateMainServices(data) {
+    fetch(url, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            // Add any additional headers as needed
+        },
+        body: JSON.stringify(data),
+    })
+        .then((respones)=>{
+            dispatch();
+        })
+        .catch((error) => {
+            console.error('API error:', error);
+            throw error;
+        });
+}
+
+//http://localhost:27017/api/v1/common/lkp/main_services_lkp/En/update_main_services_data/5
+//http://localhost:27017/api/v1/common/lkp/main_services_lkp/:langTitle/update_main_services_data/:id
